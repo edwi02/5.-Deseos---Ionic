@@ -29,16 +29,17 @@ lista: Lista;
   actualizar( item:ListaItem ){
     item.completado = !item.completado;
 
-    let todosMarcaados: boolean = true;
+    let todosMarcados: boolean = true;
 
     for(let item of this.lista.items){
       if( !item.completado ){
-        todosMarcaados = false;
+        todosMarcados = false;
         break;
       }
     }
 
-    this.lista.terminada = todosMarcaados;
+    this.lista.terminada = todosMarcados;
+    console.log(" Estan todos en estado: "+todosMarcados);
 
     this._listaDeseos.actualizarData();
   }

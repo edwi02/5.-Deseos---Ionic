@@ -10,7 +10,8 @@ export class PendientesPipe implements PipeTransform {
 
     let nuevaLista:Lista[] = [];
     for( let lista of listas ){
-      if( lista.terminada = estado ){
+      if( lista.terminada == estado ){
+        console.log("Pipe Pendientes: " + lista.terminada);
         nuevaLista.push( lista );
       }
     }
