@@ -6,10 +6,10 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let lista of _listaDeseos.listas; let i = index">
+  <ion-card *ngFor="let lista of _listaDeseos.listas | pendientes; let i = index">
 
     <ion-item color="dark" (click)="verDetalle(lista, i)">
-      <h2>{{ lista.nombre }}</h2>
+      {{ lista.nombre }}
       <ion-note item-right>
         {{ lista.items.length }} items
       </ion-note>
